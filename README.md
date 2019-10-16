@@ -11,6 +11,7 @@ Professor X has decided to replace Cerebro with a new social media site called X
 - Open your app with `code .` and launch it in the browser with `npm start`.
 - Import and set up `Router` in your `index.js` file.
 - Turn your `App.js` file into a class component.
+- Sign up for an API key at https://superheroapi.com/index.html. Signing up requires a Facebook account, so if you don't have one, then just use mine: `10112156875431003`.
 
 ## Component Heirarchy
 Your finished app should have a heirarchy as follows:
