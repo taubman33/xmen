@@ -6,9 +6,10 @@ Professor X has decided to replace Cerebro with a new social media site called X
 
 ## Getting Started
 - Fork and clone this repo.
-- **DO NOT** type `create-react-app`. The React app is already provided in this repository.
-- `cd` into your cloned repo and use `npm i` to install dependencies. `Axios` and `react-router-dom` have already been provided.
-- Set up `Router` in your `index.js` file.
+- `cd` into your cloned app and use `npx create-react-app .` (**<- NOTICE THE DOT**) to turn your cloned folder into a react app.
+- Install axios and react-router-dom.
+- Open your app with `code .` and launch it in the browser with `npm start`.
+- Import and set up `Router` in your `index.js` file.
 - Turn your `App.js` file into a class component.
 
 ## Component Heirarchy
