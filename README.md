@@ -24,7 +24,18 @@ Your finished app should have a heirarchy as follows:
 ```
 
 ## Getting Heroes 
-Let's start with the `<Heroes />` Component
+Let's start with the `<Heroes />` Component. This is a **functional** component that, upon mounting, should use axios to hit the X-Men database Professor X created really late last night. Then, it should map through the resulting list of heroes and render them onto the screen.
+
+The endpoint you'll need for your `axios.get` request is `https://basic-superhero-api.herokuapp.com/superheros`. Upon a successful request, you'll need to add this list of superheroes to the state of `App.js` and pass it to to `<Heroes />` through props.
+
+When you map through the heroes, keep in mind that each hero will need to **link** to its corresponding hero. You will need to put each X-Men's `hero_id` in the link url and the corresponding route path will need to have that `hero_id` as a `/:slug`, so that you can pass the `hero_id` to the `<Profile>` as props in the route when it's rendered.
+
+## Profiling Heroes
+We're going to do something **CRAZY** here. We're going to make our `<Profile />` componentent **a stateful class component**.
+
+Upon mounting, this component should do an axios get request to `https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/10112156875431003/${this.props.heroId}`. That call should provide loads of details on the selected hero. Add that hero to `<Profile>`'s state.
+
+Render the hero's image and details. As there will be a millisecond where you don't have a hero set in state, you'll need to use conditional rendering to only return the hero's details once the hero has been added to state.
 
 ## Wireframes
 
