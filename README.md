@@ -90,7 +90,7 @@ When you map through the heroes, keep in mind that each hero will need to **link
 ## Profiling Heroes
 We're going to do something **CRAZY** here. We're going to make our `<Profile />` componentent **a stateful class component**.
 
-Upon mounting, this component should do an axios get request to `https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/10112156875431003/${this.props.heroId}`. That call should provide loads of details on the selected hero. Add that hero to `<Profile>`'s state.
+Upon mounting, this component should do an axios get request to `https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/${apiKey}/${this.props.heroId}`. That call should provide loads of details on the selected hero. Add that hero to `<Profile>`'s state.
 
 Render the hero's image and details. As there will be a millisecond where you don't have a hero set in state, you'll need to use conditional rendering to only return the hero's details once the hero has been added to state.
 
