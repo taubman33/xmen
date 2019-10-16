@@ -1,4 +1,7 @@
 # X-FACEBOOK
+
+![](https://media.giphy.com/media/loAnHAy04UviE/giphy.gif)
+
 Professor X has decided to replace Cerebro with a new social media site called X-Facebook where X-Men can check out each other's profiles online. He's created high fidelity wireframes that you can check out below. It's your job to build them.
 
 ## Getting Started
