@@ -11,7 +11,7 @@ Professor X has decided to replace Cerebro with a new social media site called X
 ## Component Heirarchy
 Your finished app should have a heirarchy as follows:
 
-```
+```js
 <App /> 
   - <Header />
   - <main></main>
