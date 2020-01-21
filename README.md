@@ -6,8 +6,8 @@ Professor X has decided to replace Cerebro with a new social media site called X
 
 ## Getting Started
 - Fork and clone this repo.
-- `cd` into your cloned app and use `npx create-react-app .` (**<- NOTICE THE DOT**) to turn your cloned folder into a react app.
-- Install axios and react-router-dom.
+- `cd` into your cloned app and create a new React App.
+  - Don't like having your React app nested a directory down? Try `npx create-react-app .` from inside the root directory (there should only be one) to convert it into a React app of its own!
 - Open your app with `code .` and launch it in the browser with `npm start`.
 - Import and set up `Router` in your `index.js` file.
 - Turn your `App.js` file into a class component.
@@ -51,7 +51,7 @@ Let's start with the `<Heroes />` Component. When this component mounts, it shou
 
 The endpoint you'll need for this `axios.get` request is `https://basic-superhero-api.herokuapp.com/superheros`. Upon a successful request, you'll need to add this list of superheroes to the state of `App.js` and pass it to to `<Heroes />` through props as well.
 
-You may notice that this url is different from the one listed above and does not require an access key as it was created in-house by instructors GA. Professor X forgot to make an endpoint that returns multiple X-Men, apparently.
+You may notice that this url is different from the one listed above and does not require an access key as it was created in-house by instructors GA. Professor X forgot to make an endpoint that returns multiple mutants, apparently.
 
 When you map through the heroes, keep in mind that each hero will need to **link** to its corresponding hero **Route**. You will need to put each X-Men's `hero_id` in the link url and the corresponding route path will need to have that `hero_id` as a `/:slug`, so that you can pass the `hero_id` to the `<Profile>` as props in the route when it's rendered.
 
