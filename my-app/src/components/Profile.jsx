@@ -1,12 +1,14 @@
-import react, { Components} from react
+import react, { Component} from react
 
-function Profile () {
+class Profile extends Component {
+    render (){
     return (
         <div className="Profile">
-            <h1>Profile</h1>
+            <h1 className = "profile1">Profile</h1>
         </div>
 
     );
+    }
 
 }
 

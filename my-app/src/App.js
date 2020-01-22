@@ -6,6 +6,12 @@ import Footer from "./components/Footer";
 import Profile from "./components/Profile";
 import Heroes from "./components/Heroes";
 
+const accessToken = "10108849220667698";
+const URL = 'https://superheroapi.com/api/1010884922066769}'
+
+
+
+
 class App extends Component{ 
     render () {
         return (
