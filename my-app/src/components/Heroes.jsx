@@ -1,5 +1,6 @@
 import react, { Components} from react
 
+//this will be the section where all of the hero pics will be held
 
 class Heroes extends Component {
     render (){
