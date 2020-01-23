@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Swtich, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import axios from "axios";
 import Header from "./components/Header";
