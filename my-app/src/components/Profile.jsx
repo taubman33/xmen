@@ -17,9 +17,10 @@ class Profile extends React.Component{
     
     //we are recruiting heroes in like Apocalypse arming his horsemen
     fetchInfo = async()=>{
+        //so the id is the character clicked
         const heroID = this.props.navProps.match.params.id
     const response= await axios.get(`https://superheroapi.com/api/1010884922066769${heroID}`)
-    const data= response.data
+    const data = response.data
     this.setState({
         hero: data
     })
@@ -28,7 +29,7 @@ class Profile extends React.Component{
     //getting the info in when it loads up properly so we can Juggernaut it onto the screen
     componentDidMount(){
         this.fetchInfo()
-        console.log(this.props)
+        console.log(`profile working,  ${this.props}`)
       }
 
 
@@ -38,18 +39,19 @@ class Profile extends React.Component{
 
         if(!this.state.hero.name){
             return (
-                <div><p>Wait up, bub!</p></div>
+                <div className="loadingScreen"><p>Wait up, bub!</p></div>
             )
         }
 
 
         return(
         <div className = "heroCard">
-            <h1>working</h1>
         <h1>{this.state.hero.name}</h1>
         <h1>Real Name:{this.state.hero['full-name']}</h1>
+
         <div className="heroStats">
             <h2>Stats:</h2>
+
          <ul className="stats">
                 <li>Intelligence: {this.state.hero['intelligence']}</li>
                  <li>Strength: {this.state.hero['strength']}</li>
@@ -57,10 +59,12 @@ class Profile extends React.Component{
                  <li>Durability: {this.state.hero['durability']}</li>
                  <li>Power: {this.state.hero['power']}</li>
                  <li>Combat: {this.state.hero['combat']}</li>
-                     </ul>
+             </ul>
                         
-         </div>
-         <img src= {this.state.hero.image.url}></img>
+           </div>
+
+         <img src= {this.state.hero.image.URL} alt="heroImage"></img>
+
          </div>
                
        )

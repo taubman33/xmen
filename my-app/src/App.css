@@ -17,24 +17,27 @@ background: black;
 color: white;
 font-size: 36px;
 text-align: center;
-
-
 }
 
 
+
 .heroCard {
+  
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 1vw;
   border: 1px solid black;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
-  background-color: white;
-  transition: transform .5s
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transition: transform .5s;
 }
 
 .heroCard:hover {
   transform: scale(1.10)
+}
+
+.Link {
+  float: left;
 }
 
 .heroCard img {
@@ -42,8 +45,13 @@ text-align: center;
   height: auto;
 }
 
+.loadingScreen{
+  text-align: center;
+  font-size: 72px;
+}
+
 .photos{
-  display: inline-block
+  display: inline-block;
 }
 
 
@@ -52,5 +60,5 @@ footer {
   background-color: black;
   color:white;
   font-size: 30px;
-  padding: 5px;
+  padding: 3px;
 }

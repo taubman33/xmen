@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-//setting up as functional
+//setting link back home and returns  as functional
 function Header() {
     return (
         <header>
@@ -9,7 +9,7 @@ function Header() {
             <Link exact="true" activeclassname="active" to="/">
                 Home
             </Link>
-            <h1>X-BOOK</h1>
+            <h1>MARVELBOOK</h1>
             </div>
         </header>
     )
