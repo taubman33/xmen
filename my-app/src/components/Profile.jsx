@@ -1,37 +1,70 @@
 import React from 'react'
+import axios from 'axios'
+
+const URL = 'https://superheroapi.com/api/1010884922066769'
+const superAPI = 'https://basic-superhero-api.herokuapp.com/superheros'
+const accessToken = "1010884922066769";
 
 
-//this is where we will link the individual hero profiles when they are clicked
+class Profile extends React.Component{
+
+    constructor(props){
+        super(props)
+        this.state={
+            hero:{},
+        }
+    }
+    
+    //we are recruiting heroes in like Apocalypse arming his horsemen
+    fetchInfo = async()=>{
+        const heroID = this.props.navProps.match.params.id
+    const response= await axios.get(`https://superheroapi.com/api/1010884922066769${heroID}`)
+    const data= response.data
+    this.setState({
+        hero: data
+    })
+    }
+
+    //getting the info in when it loads up properly so we can Juggernaut it onto the screen
+    componentDidMount(){
+        this.fetchInfo()
+        console.log(this.props)
+      }
 
 
-function Profile(props) {
+      //rendering info onto the screen
+      //like holograms in the Danger Room
+    render(){
 
-    props.fetchHero(props.match.params.hero_id)
+        if(!this.state.hero.name){
+            return (
+                <div><p>Wait up, bub!</p></div>
+            )
+        }
 
-    while (props.hero.id !== props.match.params.hero_id) { 
-        return <p>Loading...</p>
-    }    
 
-    const { name, biography, powerstats } = props.hero
-    //setting up the hero card to display name and stats. keeping the '' around the name to keep it recognized as a string
-    return (
-        <div className="profile">
-            <img src={props.hero.image.url} alt={name}/>
-            <div className="profile-details">
-                <h2>{name}</h2>
-                <p>Real Name: {biography['full-name']}</p> 
-                <ul>
-                    <li>Intelligence: {powerstats.intelligence}!</li>
-                    <li>Strength: {powerstats.strength}!</li>
-                    <li>Speed: {powerstats.speed}!</li>
-                    <li>Durability: {powerstats.durability}!</li>
-                    <li>Power: {powerstats.power}!</li>
-                    <li>Combat: {powerstats.combat}!</li>
-                </ul>
-            </div>
-        </div>
-    )
-
+        return(
+        <div className = "heroCard">
+            <h1>working</h1>
+        <h1>{this.state.hero.name}</h1>
+        <h1>Real Name:{this.state.hero['full-name']}</h1>
+        <div className="heroStats">
+            <h2>Stats:</h2>
+         <ul className="stats">
+                <li>Intelligence: {this.state.hero['intelligence']}</li>
+                 <li>Strength: {this.state.hero['strength']}</li>
+                 <li>Speed: {this.state.hero['speed']}</li>
+                 <li>Durability: {this.state.hero['durability']}</li>
+                 <li>Power: {this.state.hero['power']}</li>
+                 <li>Combat: {this.state.hero['combat']}</li>
+                     </ul>
+                        
+         </div>
+         <img src= {this.state.hero.image.url}></img>
+         </div>
+               
+       )
+    }
 }
 
 export default Profile

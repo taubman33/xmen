@@ -1,3 +1,56 @@
 body {
-  background: blue;
+  background: white;
+  font-family: 'Bangers', cursive;
+}
+
+.heroes {
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+.headerLink{
+background: black;
+color: white;
+font-size: 36px;
+text-align: center;
+
+
+}
+
+
+.heroCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1vw;
+  border: 1px solid black;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+  background-color: white;
+  transition: transform .5s
+}
+
+.heroCard:hover {
+  transform: scale(1.10)
+}
+
+.heroCard img {
+  width: 20vw;
+  height: auto;
+}
+
+.photos{
+  display: inline-block
+}
+
+
+footer {
+  text-align: center;
+  background-color: black;
+  color:white;
+  font-size: 30px;
+  padding: 5px;
 }

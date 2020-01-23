@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 import Profile from './components/Profile'
 
 
-const URL = 'https://superheroapi.com/api/1010884922066769}'
+const URL = 'https://superheroapi.com/api/1010884922066769'
 const superAPI = 'https://basic-superhero-api.herokuapp.com/superheros'
 const accessToken = "10108849220667698";
 

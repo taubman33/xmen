@@ -10,11 +10,11 @@ import {NavLink} from 'react-router-dom'
 function Heroes(props){
      //returning our heroes here
     return(
-        <div className= "hero">
+        <div className= "heroes">
             {props.newHero.map(hero => (
-                <NavLink className= 'newHero' to={`/${hero.hero_id}`}>
-                <h1>{hero.name}</h1>
+                <NavLink className= 'heroCard' to={`/${hero.hero_id}`}>
                 <img className= 'photos' src= {hero.image_url}/>
+                <h1>{hero.name}</h1>
                 </NavLink>
             ))}
         </div>
