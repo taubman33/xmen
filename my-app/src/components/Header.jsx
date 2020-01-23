@@ -1,16 +1,15 @@
-import react, { Component} from react;
+import React from "react"
+import { Link } from "react-router-dom"
 
-class Header extends Component {
-    render (){
+//setting up as functional
+function Header() {
     return (
-        <div className="Header">
-            <h1 className="header1"> Header </h1>
-        </div>
-
-    );
-   }
-
+        <header>
+            <Link exact="true" activeclassname="active" to="/">
+                Home
+            </Link>
+            <h1>X-BOOK</h1>
+        </header>
+    )
 }
-
-
 export default Header

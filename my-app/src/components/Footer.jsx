@@ -1,17 +1,14 @@
-import react, { Components} from react
+import React from 'react'
 
-//setting up as functional 
+ 
+//since we aren't lifting or linking anything special we can set it up as functional
 
 function Footer () {
-
-return (
-    <div className="footer">
-        <h1>Footer</h1>
-    </div>
-)
-
-
+   return(
+        <footer>
+            <p>&copy; 2019 - JT -  General Assembly</p>
+        </footer>
+    )
 }
-
 
 export default Footer
