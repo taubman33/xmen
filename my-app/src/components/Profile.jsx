@@ -1,9 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 
-const URL = 'https://superheroapi.com/api/1010884922066769'
+const URL = 'https://superheroapi.com/api/10108849220667698/'
 const superAPI = 'https://basic-superhero-api.herokuapp.com/superheros'
-const accessToken = "1010884922066769";
+const accessToken = "10108849220667698";
 
 
 class Profile extends React.Component{
@@ -14,12 +14,12 @@ class Profile extends React.Component{
             hero:{},
         }
     }
-    
+
     //we are recruiting heroes in like Apocalypse arming his horsemen
     fetchInfo = async()=>{
         //so the id is the character clicked
         const heroID = this.props.navProps.match.params.id
-    const response= await axios.get(`https://superheroapi.com/api/1010884922066769${heroID}`)
+    let response = await axios.get(`${URL}${heroID}`)
     const data = response.data
     this.setState({
         hero: data
@@ -60,15 +60,15 @@ class Profile extends React.Component{
                  <li>Power: {this.state.hero['power']}</li>
                  <li>Combat: {this.state.hero['combat']}</li>
              </ul>
-                        
+
            </div>
 
          <img src= {this.state.hero.image.URL} alt="heroImage"></img>
 
          </div>
-               
+
        )
     }
 }
 
-export default Profile
+export default Profile 
